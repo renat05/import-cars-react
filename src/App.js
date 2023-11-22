@@ -4,6 +4,7 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Main from './Main';
 import Nav from './components/Navigation';
 import Footer from './components/Footer';
+import Contact from './components/Contact'
 import Product from './components/Product';
 import Favourites from './components/Favorites';
 import { ToastContainer, toast } from "react-toastify";
@@ -26,12 +27,13 @@ function App() {
     <BrowserRouter>
       <ToastContainer />
       <Nav onSearch={handleSearch} />
-      <Footer />
       <Routes>
         <Route path='/favorites' element={<Favourites />} />
         <Route path="/" element={<Main notify={notify} filteredCars={filteredCars.length > 0 ? filteredCars : allCars} />} />
         <Route path="/product/:id" element={<Product allCars={allCars} />} />
-      </Routes>
+        <Route path="/contact" element={<Contact/>} />
+      </Routes>  
+      <Footer /> 
     </BrowserRouter>
   );
 }

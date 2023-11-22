@@ -11,6 +11,7 @@ const Nav = ({ onSearch }) => {
       <ul className="nav-links">
         <Link to={{ pathname: '/', }}>Home</Link>
         <Link to='/favorites'>Favourites</Link>
+        <Link to='/contact'>Contacts</Link>
         <li><input onChange={(e) => setSearch(e.target.value)} value={search} className="text-input" type='text' /></li>
       </ul>
     </nav>
